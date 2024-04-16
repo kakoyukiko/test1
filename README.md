@@ -4,19 +4,19 @@
 githubアカウント作成画面 (https://github.com/) でサインアップ
 
 ## できればターミナルを使って以下をインストールする
-homebrew  
+1. homebrew  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`   
-git  
+2. git  
 `brew install git`      
-github desktop   
+3. github desktop   
 `これはウェブでダウンロードした`      
-docker desktop  
+4. docker desktop  
 `これはウェブでダウンロードした`    
-docker  
+5. docker  
     `brew install --cask docker`
-docker-compose  
+6. docker-compose  
     `brew install docker-compose`  
-visual studio code  
+7. visual studio code  
     `brew install visual studio code`  
 
 ## コマンドで確認する  
@@ -29,8 +29,8 @@ visual studio code
 ## github desktopで新しいリポジトリを作成し、ウェブとsyncさせる　　
 チュートリアルをやってから自分で新しくリポジトリを作成する  
 ## 作ったリポジトリをcloneする
-    github desktopでclone repoditoryを選び、ウェブ上のリンクと置きたいローカルパスを指定  
-    ウェブ上からローカルへと落とし込む  
+github desktopでclone repoditoryを選び、ウェブ上のリンクと置きたいローカルパスを指定  
+ウェブ上からローカルへと落とし込む  
 ## レポジトリにマークダウンファイルを作る
 ## 作ったマークダウンファイルをpushする
 VScodeで編集する  
