@@ -29,28 +29,30 @@ githubアカウント作成画面 (https://github.com/) でサインアップ
 ## github desktopで新しいリポジトリを作成し、ウェブとsyncさせる　　
 チュートリアルをやってから自分で新しくリポジトリを作成する  
 ## 作ったリポジトリをcloneする
-github desktopでclone repoditoryを選び、ウェブ上のリンクと置きたいローカルパスを指定  
-ウェブ上からローカルへと落とし込む  
++ github desktopでclone repositoryを選び、ウェブ上のリンクと置きたいローカルパスを指定  
++ ウェブ上からローカルへと落とし込む  
 ## レポジトリにマークダウンファイルを作る
 ## 作ったマークダウンファイルをpushする
-VScodeで編集する  
-github desktopの左下のcommitボタンを押す  
-github desktopの右上のpushボタンを押す  
++ VScodeで編集する  
++ github desktopの左下のcommitボタンを押す  
++ github desktopの右上のpushボタンを押す  
 # OSネットワーク
 ## ネットワーク通信を行う
 ### リモート（インスタンス）環境へのアクセス
 1. 秘密鍵をダウンロード（拡張子は.pem）  
 2. ターミナルに入る  
 3. ターミナルで以下のコマンドを入力し、秘密鍵を配置
+```
     cd  
     mkdir .ssh  
     chmod 700 .ssh/  
     mv Downloads/~~~~.pem .ssh/  
     chmod 600 .ssh/~~~~.pem  
-4. 初期ログインを行う
-    ssh -i ~/.ssh/~~~~.pem *username* @ *IPアドレス*
-    初回はパスワードを設定する。  
-    2回パスワードを入力し、正常に設定されると自動的にログアウト
+```
+4. 初期ログインを行う  
+    `ssh -i ~/.ssh/~~~~.pem *username* @ *IPアドレス*`  
+    + 初回はパスワードを設定する。  
+    + 2回パスワードを入力し、正常に設定されると自動的にログアウト
 5. もう一度ログイン
     ssh -i ~/.ssh/~~~~.pem *username* @ *IPアドレス*
 6. ターミナルの環境が *username*@*IPアドレス*になってたらOK
