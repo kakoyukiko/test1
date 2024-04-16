@@ -5,19 +5,19 @@ githubアカウント作成画面 (https://github.com/) でサインアップ
 
 ## できればターミナルを使って以下をインストールする
 homebrew  
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"　　 
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`   
 git  
-    brew install git    
+`brew install git`      
 github desktop   
-    これはウェブでダウンロードした    
+`これはウェブでダウンロードした`      
 docker desktop  
-    これはウェブでダウンロードした  
+`これはウェブでダウンロードした`    
 docker  
-    brew install --cask docker
+    `brew install --cask docker`
 docker-compose  
-    brew install docker-compose  
+    `brew install docker-compose`  
 visual studio code  
-    brew install visual studio code  
+    `brew install visual studio code`  
 
 ## コマンドで確認する  
     docker ps  
@@ -25,7 +25,7 @@ visual studio code
     git -v  
     brew -v  
 
-#　git初歩とマークダウン  
+# git初歩とマークダウン  
 ## github desktopで新しいリポジトリを作成し、ウェブとsyncさせる　　
 チュートリアルをやってから自分で新しくリポジトリを作成する  
 ## 作ったリポジトリをcloneする
