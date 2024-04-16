@@ -33,7 +33,7 @@ visual studio code
     ウェブ上からローカルへと落とし込む  
 ## レポジトリにマークダウンファイルを作る
 ## 作ったマークダウンファイルをpushする
-    VScodeで編集する
-    github desktopの左下のcommitボタンを押す
-    github desktopの右上のpushボタンを押す
+VScodeで編集する  
+github desktopの左下のcommitボタンを押す  
+github desktopの右上のpushボタンを押す  
     
