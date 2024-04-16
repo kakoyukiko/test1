@@ -54,5 +54,5 @@ githubアカウント作成画面 (https://github.com/) でサインアップ
     + 初回はパスワードを設定する。  
     + 2回パスワードを入力し、正常に設定されると自動的にログアウト
 5. もう一度ログイン
-    ssh -i ~/.ssh/~~~~.pem * username *@* IPアドレス *
+`ssh -i ~/.ssh/~~~~.pem *username*@*IPアドレス*`
 6. ターミナルの環境が *username*@*IPアドレス*になってたらOK
