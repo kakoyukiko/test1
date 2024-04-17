@@ -36,7 +36,7 @@ githubアカウント作成画面 (https://github.com/) でサインアップ
 + VScodeで編集する  
 + github desktopの左下のcommitボタンを押す  
 + github desktopの右上のpushボタンを押す  
-# OSネットワーク
+# OSネットワーク (1/2)
 ## ネットワーク通信を行う
 ### リモート（インスタンス）環境へのアクセス
 1. 秘密鍵をダウンロード（拡張子は.pem）  
