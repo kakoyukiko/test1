@@ -111,6 +111,11 @@ error.logは　`/usr/local/var/log/nginx`パスの中にある。<br>
    ブラウザで`http://localhost:8080/` にアクセスして、Nginxコンテナから提供されているHTMLファイルが表示されることを確認する。
 <br>
 
+## To do
++ CSSやJavaScriptを使ってWebページを華やかにしてみる。
++ Webサーバーにnginx公式Dockerイメージを使わず、ubuntu公式イメージを元にして同様の機能をもつイメージを作成してみる。また、作成したイメージをtar.gz形式として出力する。
++ docker-composeについて調べ、Webサーバーのコントロールに使ってみる。
+
 ## 今日の新しい学びの復習
 
 
