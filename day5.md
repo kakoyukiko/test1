@@ -10,7 +10,7 @@
     + Webサーバ
     WEBブラウザからのリクエストに応じて静的画面や画像などのホームページのデータをWebブラウザーに送ってくれるサーバー
 + 仕組みの図を見てみる
-![Webページがブラウザに反映される仕組み](/Users/brains2024/pictures/4_22 memo.png)
+![仕組みを描いてみた](https://github.com/kakoyukiko/test1/blob/main/%E3%82%A6%E3%82%A7%E3%83%95%E3%82%99%E3%83%98%E3%82%9A%E3%83%BC%E3%82%B7%E3%82%99%E3%81%8B%E3%82%99%E8%A6%8B%E3%81%88%E3%82%8B%E7%90%86%E7%94%B1.png)
 <br>
 
 ## mac上で簡単なHTMLファイルを書いて、ブラウザで開いてみる
@@ -49,11 +49,12 @@ b: VScodeの「index.html」をChromeにドラッグする
 ## macにnginxを導入して起動し、ローカルで書いたHTMLファイルがwebブラウザに表示されるようにする
 
 1. homebrewを使用して、nginxをインストール `brew install nginx`
-2. nginxを起動 `nginx`
+2. nginxを起動 `(start) nginx`
 3. どのポートを開いているのかlsofで確認 `lsof -c nginx -P | grep LISTEN` <br>
 右の方に書いてある数字(8080)がポート番号なので、http://localhost:8080 にアクセスすると表示される、という仕組み。
 4. nginxの設定ファイルをいじる <br>
    nginxの設定ファイルは、Macの場合/usr/local/etc/nginx/nginx.conf というパスに置かれている。<br>
+   どのバスにあるのかは、webサーバの公式サイトに書いてあるらしい<br>
    `vim /usr/local/etc/nginx/nginx.conf`で設定ファイルに入る <br>
    次に、目的のHTMLファイルを提供するように書き加える <br>
    ```
@@ -78,6 +79,40 @@ b: VScodeの「index.html」をChromeにドラッグする
 error.logは　`/usr/local/var/log/nginx`パスの中にある。<br>
 `vim error.log`で入るとerror履歴が出てくる。一番下が最新のもの。これでどこでエラーが出ているのかがわかる。
 <br>
+
+## mac上のDockerでnginxコンテナを起動し、ローカルで書いたHTMLファイルがwebブラウザで表示されるようにする
+
+1. docker imageでnginxイメージをpullする `docker pull nginx`
+2. コンテナを作る(細かいオプションは後で解説)
+    ```
+    docker run --name kako-nginx -p 8080:80 -v /Users/brains2024/Desktop/steak_site/:/usr/share/nginx/html:ro -d nginx
+    ```
+    <br>
+
+    |-option|意味|
+    |-|-|
+    |--name|コンテナ名|
+    |-p| ポート指定|
+    |-v|バインドマウント|
+    |-d|バックグラウンドで実行| 
+
+    <br>
+
+    + -p <ホストのポート>:<コンテナのポート>でローカルのポート番号が聞かれたらコンテナのポート番号へアクセスを振替
+    <br>
+
+    + バインドマウント：ホスト側のディレクトリをコンテナ内のディレクトリと共有する。コンテナ側のどこのディレクトリを指定したらいいかわからないときは、大体Dockrehubの[公式image HP](https://hub.docker.com/_/nginx)に載っている。
+    <br>
+
+    + バックグラウンド：プログラムがユーザーの見えないところで実行される
+    <br>
+
+3. ブラウザで確認する
+   ブラウザで`http://localhost:8080/` にアクセスして、Nginxコンテナから提供されているHTMLファイルが表示されることを確認する。
+<br>
+
+## 今日の新しい学びの復習
+
 
 
 
