@@ -13,17 +13,11 @@
 3. HTMLファイルを作成 `touch index.html`
 4. CSSディレクトリを作成 `mkdir css`
 5. CSSファイルをCSSディレクトリの中に作成 `touch css/style.css` <br>
- *CSSファイルたちはCSSディレクトリ下に作成するというコツがある。
- <br>
-
-6. HTMLファイルに書き込むには2種類の方法がある（今回はaでやったが、bの方が良さそう） 
-<br>
-
-   a: テキストエディタでHTMLを開く `vim index.html` 
-   <br>
-
-   b: 作った親ディレクトリをVSCodeにドラッグする 
-   <br>
+ *CSSファイルたちはCSSディレクトリ下に作成するというコツがある.
+6. HTMLファイルに書き込むには2種類の方法がある（今回はaでやったが、bの方が良さそう） <br>
+    a: テキストエディタでHTMLを開く `vim index.html` <br>
+    b: 作った親ディレクトリをVSCodeにドラッグする 
+    <br>
 
 7. Chromeを開く(これも２種類方法がある) <br>
    a: HTMLファイルを開くコマンド `open index.html` <br>
@@ -56,9 +50,11 @@
     ```
     <br>
 
-2. ローカル環境から、ローカルで作成したindex.htmlファイルをリモート環境へコピー <br>
+2. フリーのHTMLサイト(https://f-tpl.com/sample/tpl_090/)でダウンロード
+
+2. ダウンロードフォルダをリモート環境へコピー <br>
    ```
-   scp -i ~~~~~~username.pem ~/Desktop/steak_site/index.html kako@11.111.111.11:/home/username
+   scp -i ~~~~~~username.pem -r ~/Downloads/tpl_090/ kako@11.111.111.11:/home/username
    ```
 
 3. リモート環境に戻る
