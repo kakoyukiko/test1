@@ -50,7 +50,7 @@
     ```
     <br>
 
-2. フリーのHTMLサイト(https://f-tpl.com/sample/tpl_090/)でダウンロード
+2. フリーのHTMLサイト (https://f-tpl.com/sample/tpl_090/) でダウンロード
 
 2. ダウンロードフォルダをリモート環境へコピー <br>
    ```
